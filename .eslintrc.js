@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'prettier'],
   extends: [
     'airbnb',
     'plugin:react/recommended',
@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:storybook/recommended',
   ],
   rules: {
     'linebreak-style': 0,
@@ -27,13 +28,13 @@ module.exports = {
     ],
     'jsx-a11y/no-noninteractive-element-interactions': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
-    'prettier/prettier': ['error', { trailingComma: 'es5' }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/require-default-props': 0,
   },
   settings: {
     'import/resolver': {
-      typescript: {},
+      typescript: { alwaysTryTypes: true },
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
