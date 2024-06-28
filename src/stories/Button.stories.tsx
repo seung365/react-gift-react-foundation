@@ -32,4 +32,5 @@ DefaultButton.args = {
   children: 'Dark Theme Large',
   theme: { backgroundColor: 'black', color: 'white' },
   size: 'large',
+  onClick: () => alert('클릭했습니다'),
 };
