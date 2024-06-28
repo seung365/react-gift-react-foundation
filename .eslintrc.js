@@ -13,6 +13,7 @@ module.exports = {
     'plugin:storybook/recommended',
   ],
   rules: {
+    'react/function-component-definition': 0,
     'linebreak-style': 0,
     'import/prefer-default-export': 0,
     'import/extensions': 0,
@@ -31,6 +32,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/require-default-props': 0,
+    'react/jsx-props-no-spreading': 0, // 이 줄을 추가하여 스프레딩 활성화
   },
   settings: {
     'import/resolver': {
