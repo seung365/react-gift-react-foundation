@@ -13,9 +13,13 @@ export default {
       mapping: {
         kakao: { backgroundColor: 'yellow', color: 'black' },
         black: { backgroundColor: 'black', color: 'white' },
-        outline: { backgroundColor: 'black', color: 'white' },
-        lightGray: { backgroundColor: 'black', color: 'white' },
-        darkGary: { backgroundColor: 'black', color: 'white' },
+        outline: {
+          backgroundColor: 'white',
+          color: 'black',
+          border: '2px solid black',
+        },
+        lightGray: { backgroundColor: 'lightgray', color: 'black' },
+        darkGary: { backgroundColor: 'darkgray', color: 'black' },
       },
     },
     size: {
@@ -29,7 +33,7 @@ const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
-  children: 'Dark Theme Large',
+  children: '버튼',
   theme: { backgroundColor: 'black', color: 'white' },
   size: 'large',
   onClick: () => alert('클릭했습니다'),
