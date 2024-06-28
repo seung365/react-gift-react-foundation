@@ -5,6 +5,7 @@ import { css } from '@emotion/react';
 export interface Theme {
   backgroundColor: string;
   color: string;
+  border?: string;
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,6 +19,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const themeStyles = (theme: Theme) => css`
   background-color: ${theme.backgroundColor};
   color: ${theme.color};
+  ${theme.border ? `border: ${theme.border};` : 'border: none;'}
 `;
 
 // Size-based styles
@@ -56,7 +58,6 @@ const sizeStyles = (size: string) => {
 
 // Styled Button component
 const StyledButton = styled.button<ButtonProps>`
-  border: none;
   border-radius: 4px;
   cursor: pointer;
   ${(props) => themeStyles(props.theme)}
